@@ -249,41 +249,41 @@
             takeaways: [
                 {
                     icon: "settings",
-                    title: "Build the Pipeline",
-                    desc: "Create a SOFAI-LM pipeline that evaluates candidates, generates feedback, and iteratively refines outputs."
+                    title: "SOFAI-LM Pipeline",
+                    desc: "Build a pipeline that evaluates an LLM's candidate solution using a domain-specific function (e.g., C(y) for graph coloring), generates targeted feedback, and iteratively refines outputs."
                 },
                 {
-                    icon: "git-branch", // lucide icon name
+                    icon: "git-branch",
                     title: "Metacognitive Control",
-                    desc: "Implement correctness evaluators, feedback formatting, and gating criteria for efficient model switching."
+                    desc: "Implement correctness evaluators, feedback formatting, and gating/stopping criteria for efficient model switching between fast LLMs and slow LRMs."
                 },
                 {
                     icon: "activity",
-                    title: "Trade-off Analysis",
-                    desc: "Practice passing context to LRMs (Problem-Only, Best-Attempt, Full-History) to balance accuracy vs. time."
+                    title: "Accuracy-Time Trade-offs",
+                    desc: "Practice passing the right amount of context to the LRM (Problem-Only, Best-Attempt, Full-History) and reading the accuracy-time trade-offs."
                 }
             ],
             schedule: [
-                { time: "0-20 min", topic: "Welcome, objectives, and success criteria", lead: "Francesca Rossi" },
-                { time: "20-40 min", topic: "Environment Setup: Ollama (Local/Colab) & Sanity Checks", lead: "Vishal Pallagani" },
-                { time: "40-50 min", topic: "Hands-on A: Graph Coloring evaluator, targeted feedback, memory", lead: "Vedant Khandelwal" },
+                { time: "0-20 min", topic: "Welcome, objectives, and success criteria (accuracy-time trade-off)", lead: "Francesca Rossi" },
+                { time: "20-40 min", topic: "Environment Setup: Ollama (local or Colab), model pulls, sanity checks", lead: "Vishal Pallagani" },
+                { time: "40-50 min", topic: "Hands-on A: Graph Coloring evaluator C(y), targeted feedback, memory", lead: "Vedant Khandelwal" },
                 { time: "50-75 min", topic: "Hands-on B: DebugBench test harness, failure-focused feedback", lead: "Keerthiram Murugesan" },
-                { time: "75-85 min", topic: "LRM Fallback Demo & Model Swapping", lead: "Vedant Khandelwal" },
-                { time: "85-105 min", topic: "Wrap-up, Common Failure Modes & Q&A", lead: "Lior Horesh" }
+                { time: "75-85 min", topic: "LRM Fallback Demo & Model Swapping (PO/BA/FH strategies)", lead: "Vedant Khandelwal" },
+                { time: "85-105 min", topic: "Wrap-up, checklists, common failure modes, and Q&A", lead: "Lior Horesh" }
             ],
             organizers: [
                 { 
                     name: "Vedant Khandelwal", 
                     affil: "University of South Carolina",
                     role: "Doctoral Student",
-                    desc: "Expert in Generative AI, Knowledge Graphs, and Neuro-symbolic systems. SOFAI-LM lead developer.",
+                    desc: "Expert in Generative AI and Neuro-symbolic systems. Developed SOFAI-LM architecture. Best Poster Award at DISCOVER USC 2024.",
                     link: "https://khvedant.github.io"
                 },
                 { 
                     name: "Francesca Rossi", 
                     affil: "IBM Research",
                     role: "IBM Fellow & AI Ethics Leader",
-                    desc: "Professor at University of Padova. Research focus on constraint reasoning, preferences, and AI ethics.",
+                    desc: "Professor at University of Padova. Past President of AAAI. Research focus on constraint reasoning, preferences, and AI ethics.",
                     link: "https://research.ibm.com/people/francesca-rossi"
                 },
                 { 
@@ -297,29 +297,29 @@
                     name: "Keerthiram Murugesan", 
                     affil: "IBM Research",
                     role: "Staff Research Scientist",
-                    desc: "PhD from CMU. Research interests include Multi-task Learning, RL, and Neuro-symbolic AI.",
+                    desc: "PhD from CMU. Selected for Heidelberg Laureate Forum 2018. Research in Multi-task Learning, RL, and Neuro-symbolic AI.",
                     link: "mailto:keerthiram.murugesan@ibm.com"
                 },
                 { 
                     name: "Lior Horesh", 
                     affil: "IBM Research",
                     role: "Senior Manager",
-                    desc: "Lead for Math & Theoretical CS. Adjunct Professor at Columbia University.",
+                    desc: "Lead for Math & Theoretical CS. Adjunct Professor at Columbia University. IBM Master Inventor.",
                     link: "https://ibm.biz/lhoresh"
                 }
             ],
             references: [
-                "<strong>SOFAI-LM:</strong> Language Models Coupled with Metacognition Can Outperform Reasoning Models. <em>Khandelwal et al. (2025)</em>.",
-                "<strong>SOFAI Lab (2025):</strong> A Hands-On Guide to Building Neurosymbolic Systems with Metacognitive Control. <em>Pallagani et al., AAAI 2025</em>.",
-                "<strong>Plan-SOFAI:</strong> A Neuro-Symbolic Planning Architecture. <em>Fabiano et al. (2023)</em>.",
-                "<strong>Thinking Fast and Slow in AI:</strong> The Role of Metacognition. <em>Ganapini et al. (2022)</em>.",
-                "<strong>DebugBench:</strong> Evaluating Debugging Capability of Large Language Models. <em>Tian et al. (2024)</em>."
+                "<strong>SOFAI-LM:</strong> Khandelwal et al. (2025). <em>Language Models Coupled with Metacognition Can Outperform Reasoning Models.</em> arXiv preprint.",
+                "<strong>Previous Lab:</strong> Pallagani et al. (2025). <em>SOFAI Lab: A Hands-On Guide to Building Neurosymbolic Systems with Metacognitive Control.</em> AAAI 2025.",
+                "<strong>Plan-SOFAI:</strong> Fabiano et al. (2023). <em>Plan-SOFAI: A Neuro-Symbolic Planning Architecture.</em>",
+                "<strong>Metacognition:</strong> Ganapini et al. (2022). <em>Thinking Fast and Slow in AI: The Role of Metacognition.</em>",
+                "<strong>DebugBench:</strong> Tian et al. (2024). <em>Evaluating Debugging Capability of Large Language Models.</em> ACL 2024."
             ],
             resources: [
                 { label: "Paper (Preprint)", link: "#", icon: "file-text", active: false }, 
                 { label: "GitHub Repo", link: "https://github.com/khvedant/sofailm-lab", icon: "github", active: true },
                 { label: "Colab Notebook", link: "#", icon: "code", active: false },
-                { label: "Slides", link: "#", icon: "monitor", active: false }
+                { label: "Previous Lab (2025)", link: "https://aaai.org/conference/aaai/aaai-25/", icon: "archive", active: true }
             ]
         };
 
