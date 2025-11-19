@@ -35,6 +35,9 @@
         .nav-link:hover::after {
             width: 100%;
         }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
@@ -50,8 +53,8 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#about" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">About</a>
                     <a href="#schedule" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Schedule</a>
-                    <a href="#speakers" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Organizers</a>
-                    <a href="#resources" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Resources</a>
+                    <a href="#organizers" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Organizers</a>
+                    <a href="#references" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">References</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -66,15 +69,15 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">About</a>
                 <a href="#schedule" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Schedule</a>
-                <a href="#speakers" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Organizers</a>
-                <a href="#resources" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Resources</a>
+                <a href="#organizers" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Organizers</a>
+                <a href="#references" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">References</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
@@ -91,6 +94,7 @@
                 Building reliable, compute-efficient reasoning systems by instantiating SOFAI-LM: 
                 a cognitive architecture guiding fast LLMs with metacognitive feedback.
             </p>
+            
             <div class="mt-10 flex justify-center gap-4">
                 <a href="#resources" class="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition flex items-center gap-2">
                     <i data-lucide="download"></i> Get Materials
@@ -98,6 +102,24 @@
                 <a href="#about" class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition">
                     Learn More
                 </a>
+            </div>
+
+            <!-- Logos -->
+            <div class="mt-16 border-t border-slate-100 pt-10">
+                <p class="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-8">Supported By</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 grayscale hover:grayscale-0 transition duration-500">
+                    <!-- IBM Research -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Research" class="h-12 md:h-16 w-auto">
+                    <!-- University of South Carolina -->
+                    <div class="flex items-center gap-4">
+                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/University_of_South_Carolina_logo.svg/2560px-University_of_South_Carolina_logo.svg.png" alt="University of South Carolina" class="h-14 md:h-20 w-auto">
+                    </div>
+                    <!-- AIISC Text Badge (Since specific logo URL is unstable, we use a badge style) -->
+                    <div class="flex flex-col items-start border-l-2 border-slate-300 pl-6">
+                        <span class="text-2xl font-bold text-slate-800">AIISC</span>
+                        <span class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Artificial Intelligence Institute<br>of South Carolina</span>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -120,15 +142,15 @@
                         <li class="flex items-start gap-3">
                             <i data-lucide="clock" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
                             <div>
-                                <strong class="block text-slate-900">Duration</strong>
-                                Quarter Day (1h 45m)
+                                <strong class="block text-slate-900">Format</strong>
+                                Quarter Day Lab (1h 45m)
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
                             <i data-lucide="users" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
                             <div>
                                 <strong class="block text-slate-900">Target Audience</strong>
-                                Graduate students, Researchers, Practitioners interested in Neuro-symbolic AI & LLMs.
+                                Graduate students, researchers, and practitioners in Neuro-symbolic AI & LLMs.
                             </div>
                         </li>
                          <li class="flex items-start gap-3">
@@ -171,10 +193,23 @@
         </section>
 
         <!-- Organizers -->
-        <section id="speakers" class="scroll-mt-24">
-            <h2 class="text-3xl font-bold text-slate-900 mb-8">Organizers</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="organizers-grid">
+        <section id="organizers" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Organizers & Presenters</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="organizers-grid">
                 <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Relevant Works -->
+        <section id="references" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8">Relevant Work</h2>
+            <div class="bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden">
+                <div class="p-6 sm:p-8">
+                    <p class="text-slate-500 mb-6 italic">The lab builds upon the following foundational research:</p>
+                    <ul class="space-y-4" id="references-list">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -197,6 +232,7 @@
     <footer class="bg-white border-t border-slate-200 py-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-slate-500">
             <p>&copy; 2025 SOFAI-LM Lab Organizers. Accepted at AAAI.</p>
+            <p class="mt-2 text-sm">Hosted on GitHub Pages</p>
         </div>
     </footer>
 
@@ -207,7 +243,7 @@
         // ==========================================
         const labData = {
             abstract: `
-                <p class="mb-4">This lab teaches participants how to build reliable, compute-efficient reasoning systems by instantiating <strong>SOFAI-LM</strong>, a cognitive architecture that guides a fast LLM with a training-free metacognitive feedback loop.</p>
+                <p class="mb-4">This <strong>quarter-day lab</strong> teaches participants how to build reliable, compute-efficient reasoning systems by instantiating <strong>SOFAI-LM</strong>, a cognitive architecture that guides a fast LLM with a training-free metacognitive feedback loop.</p>
                 <p class="mb-4">Attendees will implement the core loop (evaluation &rarr; targeted feedback &rarr; iterative refinement) and learn when to pass information to a slower LRM for the best trade-offs in accuracy and time. We anchor the hands-on work in two contrasting case studies: <strong>Global Constraint Satisfaction</strong> (Graph Coloring) and <strong>Localized Corrections</strong> (Code Debugging).</p>
                 <p>By the end, participants will have working templates for SOFAI-LM pipelines and practical guidance on configuring inference for reproducibility.</p>
             `,
@@ -237,14 +273,51 @@
                 { time: "85-105 min", topic: "Wrap-up, Common Failure Modes & Q&A", lead: "Lior Horesh" }
             ],
             organizers: [
-                { name: "Vedant Khandelwal", affil: "University of South Carolina" },
-                { name: "Francesca Rossi", affil: "IBM Research" },
-                { name: "Vishal Pallagani", affil: "University of South Carolina" },
-                { name: "Keerthiram Murugesan", affil: "IBM Research" },
-                { name: "Lior Horesh", affil: "IBM Research" }
+                { 
+                    name: "Vedant Khandelwal", 
+                    affil: "University of South Carolina",
+                    role: "Doctoral Student",
+                    desc: "Expert in Generative AI, Knowledge Graphs, and Neuro-symbolic systems. SOFAI-LM lead developer.",
+                    link: "https://khvedant.github.io"
+                },
+                { 
+                    name: "Francesca Rossi", 
+                    affil: "IBM Research",
+                    role: "IBM Fellow & AI Ethics Leader",
+                    desc: "Professor at University of Padova. Research focus on constraint reasoning, preferences, and AI ethics.",
+                    link: "https://research.ibm.com/people/francesca-rossi"
+                },
+                { 
+                    name: "Vishal Pallagani", 
+                    affil: "University of South Carolina",
+                    role: "PhD Candidate",
+                    desc: "Research Scientist Intern at IBM. Focused on neurosymbolic cognitive systems and planning (Plan-SOFAI).",
+                    link: "https://vishalpallagani.github.io"
+                },
+                { 
+                    name: "Keerthiram Murugesan", 
+                    affil: "IBM Research",
+                    role: "Staff Research Scientist",
+                    desc: "PhD from CMU. Research interests include Multi-task Learning, RL, and Neuro-symbolic AI.",
+                    link: "mailto:keerthiram.murugesan@ibm.com"
+                },
+                { 
+                    name: "Lior Horesh", 
+                    affil: "IBM Research",
+                    role: "Senior Manager",
+                    desc: "Lead for Math & Theoretical CS. Adjunct Professor at Columbia University.",
+                    link: "https://ibm.biz/lhoresh"
+                }
+            ],
+            references: [
+                "<strong>SOFAI-LM:</strong> Language Models Coupled with Metacognition Can Outperform Reasoning Models. <em>Khandelwal et al. (2025)</em>.",
+                "<strong>SOFAI Lab (2025):</strong> A Hands-On Guide to Building Neurosymbolic Systems with Metacognitive Control. <em>Pallagani et al., AAAI 2025</em>.",
+                "<strong>Plan-SOFAI:</strong> A Neuro-Symbolic Planning Architecture. <em>Fabiano et al. (2023)</em>.",
+                "<strong>Thinking Fast and Slow in AI:</strong> The Role of Metacognition. <em>Ganapini et al. (2022)</em>.",
+                "<strong>DebugBench:</strong> Evaluating Debugging Capability of Large Language Models. <em>Tian et al. (2024)</em>."
             ],
             resources: [
-                { label: "Paper (Preprint)", link: "#", icon: "file-text", active: false }, // set active: true when link is ready
+                { label: "Paper (Preprint)", link: "#", icon: "file-text", active: false }, 
                 { label: "GitHub Repo", link: "https://github.com/khvedant/sofailm-lab", icon: "github", active: true },
                 { label: "Colab Notebook", link: "#", icon: "code", active: false },
                 { label: "Slides", link: "#", icon: "monitor", active: false }
@@ -252,20 +325,19 @@
         };
 
         // ==========================================
-        // RENDER LOGIC (Do not need to edit below)
+        // RENDER LOGIC
         // ==========================================
         
-        // Initialize Lucide icons
         lucide.createIcons();
 
-        // Render Abstract
+        // Abstract
         document.getElementById('abstract-content').innerHTML = labData.abstract;
 
-        // Render Takeaways
+        // Takeaways
         const takeawaysContainer = document.getElementById('takeaways-grid');
         labData.takeaways.forEach(item => {
             const div = document.createElement('div');
-            div.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200";
+            div.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition";
             div.innerHTML = `
                 <div class="h-12 w-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
                     <i data-lucide="${item.icon}" class="h-6 w-6"></i>
@@ -276,55 +348,71 @@
             takeawaysContainer.appendChild(div);
         });
 
-        // Render Schedule
+        // Schedule
         const scheduleBody = document.getElementById('schedule-body');
         labData.schedule.forEach(item => {
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6 font-mono">${item.time}</td>
-                <td class="px-3 py-4 text-sm text-slate-600">${item.topic}</td>
+                <td class="px-3 py-4 text-sm text-slate-600 font-medium">${item.topic}</td>
                 <td class="px-3 py-4 text-sm text-slate-500 italic">${item.lead}</td>
             `;
             scheduleBody.appendChild(row);
         });
 
-        // Render Organizers
+        // Organizers (Updated Grid Layout)
         const orgContainer = document.getElementById('organizers-grid');
         labData.organizers.forEach(person => {
             const div = document.createElement('div');
-            div.className = "group relative flex items-center space-x-3 rounded-lg border border-slate-300 bg-white px-6 py-5 shadow-sm focus-within:ring-2 focus-within:ring-indigo-500 focus-within:ring-offset-2 hover:border-blue-400 transition";
+            div.className = "flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300 group";
             div.innerHTML = `
-                <div class="flex-shrink-0">
-                    <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100">
-                        <span class="font-medium leading-none text-slate-500">${person.name.charAt(0)}</span>
-                    </span>
-                </div>
-                <div class="min-w-0 flex-1">
-                    <a href="#" class="focus:outline-none">
-                        <span class="absolute inset-0" aria-hidden="true"></span>
-                        <p class="text-sm font-medium text-slate-900">${person.name}</p>
-                        <p class="truncate text-sm text-slate-500">${person.affil}</p>
+                <div class="p-6 flex-1 flex flex-col">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">
+                            ${person.name.charAt(0)}
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900 leading-tight">${person.name}</h3>
+                            <p class="text-sm text-blue-600 font-medium">${person.role}</p>
+                        </div>
+                    </div>
+                    <div class="text-sm text-slate-500 font-medium mb-3 uppercase tracking-wide text-xs">${person.affil}</div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">${person.desc}</p>
+                    <a href="${person.link}" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-blue-600 transition">
+                        View Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
                     </a>
                 </div>
             `;
             orgContainer.appendChild(div);
         });
 
-        // Render Resources
+        // References
+        const refList = document.getElementById('references-list');
+        labData.references.forEach(ref => {
+            const li = document.createElement('li');
+            li.className = "flex gap-3 text-slate-700 text-sm leading-relaxed";
+            li.innerHTML = `
+                <span class="text-blue-400 shrink-0 mt-1.5"><i class="fas fa-book"></i></span>
+                <span>${ref}</span>
+            `;
+            refList.appendChild(li);
+        });
+
+        // Resources
         const resContainer = document.getElementById('resource-buttons');
         labData.resources.forEach(res => {
             const btn = document.createElement('a');
             btn.href = res.active ? res.link : "javascript:void(0)";
             
-            const activeClasses = "bg-white text-slate-900 hover:bg-blue-50";
+            const activeClasses = "bg-white text-slate-900 hover:bg-blue-50 hover:scale-105";
             const inactiveClasses = "bg-slate-800 text-slate-500 cursor-not-allowed opacity-60";
             
-            btn.className = `flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition ${res.active ? activeClasses : inactiveClasses}`;
-            btn.innerHTML = `<i data-lucide="${res.icon}" class="w-4 h-4"></i> ${res.label} ${!res.active ? '(Coming Soon)' : ''}`;
+            btn.className = `flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition transform shadow-sm ${res.active ? activeClasses : inactiveClasses}`;
+            btn.innerHTML = `<i data-lucide="${res.icon}" class="w-4 h-4"></i> ${res.label} ${!res.active ? '' : ''}`;
             resContainer.appendChild(btn);
         });
 
-        // Re-run icons for dynamic content
+        // Re-run icons
         lucide.createIcons();
 
         // Mobile menu toggle
