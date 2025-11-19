@@ -34,7 +34,7 @@ Participants can access the lab materials in two ways:
 
 ### 1\. Via the Website (Recommended)
 
-Visit the [Lab Website](https://www.google.com/url?sa=E&source=gmail&q=https://khvedant.github.io/sofailm-lab/) to view the schedule, slides, and click the "Launch Notebook" buttons to open the exercises directly in Google Colab.
+Visit the [Lab Website](https://sofai-lm-aaailab.github.io/) to view all the information.
 
 ### 2\. Running Locally
 
