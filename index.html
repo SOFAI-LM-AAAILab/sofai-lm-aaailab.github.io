@@ -99,11 +99,20 @@
                 </a>
             </div>
 
+            <!-- Logos -->
             <div class="mt-16 border-t border-slate-100 pt-10">
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 grayscale hover:grayscale-0 transition duration-500">
-                    <span class="text-slate-400 font-bold text-xl">IBM Research</span>
-                    <span class="text-slate-400 font-bold text-xl">University of South Carolina</span>
-                    <span class="text-slate-400 font-bold text-xl">AIISC</span>
+                <p class="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-8">Organizations</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:grayscale-0 transition duration-500">
+                    <!-- IBM Research -->
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/62f12d261c21e21259d408c4/IBM/0x0.jpg" alt="IBM Research" class="h-12 md:h-16 w-auto">
+                    <!-- University of South Carolina -->
+                    <div class="flex items-center gap-4">
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y_mum9OJle86GizlgvtUmCSXwNg_xLdOWQ&s" alt="University of South Carolina" class="h-14 md:h-20 w-auto">
+                    </div>
+                    <!-- AIISC Text Badge (Since specific logo URL is unstable, we use a badge style) -->
+                    <div class="flex items-center gap-4">
+                         <img src="https://aiisc.cse.sc.edu/smbd24/images/ai_institute_logo.png" alt="Artificial Intelligence Institute, University of South Carolina" class="h-14 md:h-20 w-auto">
+                    </div>
                 </div>
             </div>
         </div>
@@ -191,7 +200,7 @@
             <div class="bg-slate-900 rounded-3xl p-8 md:p-16 text-center">
                 <h2 class="text-3xl font-bold text-white mb-6">Lab Materials</h2>
                 <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
-                    Access the GitHub repository, slides, and Colab notebooks.
+                    Access the GitHub repository, slides, and Colab notebooks. (Available soon)
                 </p>
                 <div class="flex flex-wrap justify-center gap-4" id="resource-buttons">
                     </div>
@@ -246,36 +255,36 @@
                     name: "Vedant Khandelwal", 
                     affil: "University of South Carolina",
                     role: "Doctoral Student",
-                    desc: "Expert in Generative AI and Neuro-symbolic systems. Developed SOFAI-LM architecture. Best Poster Award at DISCOVER USC 2024.",
-                    link: "mailto:vedant@email.sc.edu"
+                    desc: "PhD researcher at the University of South Carolina and former IBM Research intern, specializing in neurosymbolic architectures, LLM reasoning, and foundation models for pathfinding problems.",
+                    link: "https://www.linkedin.com/in/khvedant/"
                 },
                 { 
                     name: "Francesca Rossi", 
                     affil: "IBM Research",
                     role: "IBM Fellow & AI Ethics Leader",
-                    desc: "AAAI & EurAI Fellow. Past President of AAAI. Research focus on constraint reasoning, preferences, and AI ethics.",
-                    link: "mailto:francesca.Rossi2@ibm.com"
+                    desc: "IBM Fellow and Global Lead for AI Ethics, renowned for her work in constraint reasoning, multi-agent systems, and international AI governance, with over 220 publications and leadership roles in AAAI and IJCAI.",
+                    link: "https://research.ibm.com/people/francesca-rossi"
                 },
                 { 
                     name: "Vishal Pallagani", 
                     affil: "University of South Carolina",
                     role: "PhD Candidate",
-                    desc: "Research Scientist Intern at IBM. Focused on neurosymbolic cognitive systems (Plan-SOFAI, Plansformer).",
-                    link: "mailto:vishalp@mailbox.sc.edu"
+                    desc: "PhD candidate at the University of South Carolina and recurring IBM Research intern, known for developing neurosymbolic planning systems such as Plansformer, Plan-SOFAI, and fast/slow AI architectures.",
+                    link: "https://vishalpallagani.github.io/"
                 },
                 { 
                     name: "Keerthiram Murugesan", 
                     affil: "IBM Research",
                     role: "Staff Research Scientist",
-                    desc: "Expert in Multi-task Learning and Neuro-symbolic AI. Selected for Heidelberg Laureate Forum 2018.",
-                    link: "mailto:keerthiram.murugesan@ibm.com"
+                    desc: "Staff Research Scientist at IBM Research with expertise in multi-task learning, transfer learning, reinforcement learning, and NLP, recognized by awards including the CMU Presidential Fellowship and HLF selection.",
+                    link: "https://research.ibm.com/people/keerthiram-murugesan"
                 },
                 { 
                     name: "Lior Horesh", 
                     affil: "IBM Research",
                     role: "Senior Manager",
-                    desc: "Lead for Math & Theoretical CS. Adjunct Professor at Columbia University. IBM Master Inventor.",
-                    link: "mailto:lhoresh@us.ibm.com"
+                    desc: "Senior Manager of Mathematics & Theoretical Computer Science at IBM Research and former Columbia University adjunct professor, known for award-winning work in tensor algebra, AI-assisted scientific discovery, and quantum simulation.",
+                    link: "https://research.ibm.com/people/lior-horesh"
                 }
             ],
             references: [
@@ -287,7 +296,7 @@
             ],
             resources: [
                 { label: "Paper (Preprint)", link: "#", icon: "file-text", active: false }, 
-                { label: "GitHub Repo", link: "https://github.com/khvedant/sofailm-lab", icon: "github", active: true },
+                { label: "GitHub Repo", link: "https://github.com/khvedant/sofailm-lab", icon: "github", active: false },
                 { label: "Colab Notebook", link: "#", icon: "code", active: false }
             ]
         };
@@ -296,96 +305,114 @@
         // RENDER LOGIC
         // ==========================================
         
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Abstract
+            const abstractEl = document.getElementById('abstract-content');
+            if(abstractEl) abstractEl.innerHTML = labData.abstract;
 
-        // Abstract
-        document.getElementById('abstract-content').innerHTML = labData.abstract;
-
-        // Takeaways
-        const takeawaysContainer = document.getElementById('takeaways-grid');
-        labData.takeaways.forEach(item => {
-            const div = document.createElement('div');
-            div.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition";
-            div.innerHTML = `
-                <div class="h-12 w-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
-                    <i data-lucide="${item.icon}" class="h-6 w-6"></i>
-                </div>
-                <h3 class="text-lg font-bold text-slate-900 mb-2">${item.title}</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
-            `;
-            takeawaysContainer.appendChild(div);
-        });
-
-        // Schedule
-        const scheduleBody = document.getElementById('schedule-body');
-        labData.schedule.forEach(item => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6 font-mono">${item.time}</td>
-                <td class="px-3 py-4 text-sm text-slate-600 font-medium">${item.topic}</td>
-                <td class="px-3 py-4 text-sm text-slate-500 italic">${item.lead}</td>
-            `;
-            scheduleBody.appendChild(row);
-        });
-
-        // Organizers
-        const orgContainer = document.getElementById('organizers-grid');
-        labData.organizers.forEach(person => {
-            const div = document.createElement('div');
-            div.className = "flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300 group";
-            div.innerHTML = `
-                <div class="p-6 flex-1 flex flex-col">
-                    <div class="flex items-center gap-4 mb-4">
-                        <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
-                            ${person.name.charAt(0)}
+            // 2. Takeaways
+            const takeawaysContainer = document.getElementById('takeaways-grid');
+            if(takeawaysContainer) {
+                labData.takeaways.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition";
+                    div.innerHTML = `
+                        <div class="h-12 w-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                            <i data-lucide="${item.icon}" class="h-6 w-6"></i>
                         </div>
-                        <div>
-                            <h3 class="text-lg font-bold text-slate-900 leading-tight">${person.name}</h3>
-                            <p class="text-sm text-blue-600 font-medium">${person.role}</p>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">${item.title}</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">${item.desc}</p>
+                    `;
+                    takeawaysContainer.appendChild(div);
+                });
+            }
+
+            // 3. Schedule
+            const scheduleBody = document.getElementById('schedule-body');
+            if(scheduleBody) {
+                labData.schedule.forEach(item => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-slate-900 sm:pl-6 font-mono">${item.time}</td>
+                        <td class="px-3 py-4 text-sm text-slate-600 font-medium">${item.topic}</td>
+                        <td class="px-3 py-4 text-sm text-slate-500 italic">${item.lead}</td>
+                    `;
+                    scheduleBody.appendChild(row);
+                });
+            }
+
+            // 4. Organizers
+            const orgContainer = document.getElementById('organizers-grid');
+            if(orgContainer) {
+                labData.organizers.forEach(person => {
+                    const div = document.createElement('div');
+                    div.className = "flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300 group";
+                    div.innerHTML = `
+                        <div class="p-6 flex-1 flex flex-col">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
+                                    ${person.name.charAt(0)}
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900 leading-tight">${person.name}</h3>
+                                    <p class="text-sm text-blue-600 font-medium">${person.role}</p>
+                                </div>
+                            </div>
+                            <div class="text-xs text-slate-500 font-bold mb-3 uppercase tracking-wide">${person.affil}</div>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">${person.desc}</p>
+                            <a href="${person.link}" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-blue-600 transition">
+                                Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="text-xs text-slate-500 font-bold mb-3 uppercase tracking-wide">${person.affil}</div>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6 flex-1">${person.desc}</p>
-                    <a href="${person.link}" class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-blue-600 transition">
-                        Contact / Profile <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-                    </a>
-                </div>
-            `;
-            orgContainer.appendChild(div);
-        });
+                    `;
+                    orgContainer.appendChild(div);
+                });
+            }
 
-        // References
-        const refList = document.getElementById('references-list');
-        labData.references.forEach(ref => {
-            const li = document.createElement('li');
-            li.className = "flex gap-3 text-slate-700 text-sm leading-relaxed";
-            li.innerHTML = `
-                <span class="text-blue-400 shrink-0 mt-1.5"><i class="fas fa-book"></i></span>
-                <span>${ref}</span>
-            `;
-            refList.appendChild(li);
-        });
+            // 5. References
+            const refList = document.getElementById('references-list');
+            if(refList) {
+                labData.references.forEach(ref => {
+                    const li = document.createElement('li');
+                    li.className = "flex gap-3 text-slate-700 text-sm leading-relaxed";
+                    li.innerHTML = `
+                        <span class="text-blue-400 shrink-0 mt-1.5"><i class="fas fa-book"></i></span>
+                        <span>${ref}</span>
+                    `;
+                    refList.appendChild(li);
+                });
+            }
 
-        // Resources
-        const resContainer = document.getElementById('resource-buttons');
-        labData.resources.forEach(res => {
-            const btn = document.createElement('a');
-            btn.href = res.active ? res.link : "javascript:void(0)";
-            const activeClasses = "bg-white text-slate-900 hover:bg-blue-50 hover:scale-105";
-            const inactiveClasses = "bg-slate-800 text-slate-500 cursor-not-allowed opacity-60";
-            btn.className = `flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition transform shadow-sm ${res.active ? activeClasses : inactiveClasses}`;
-            btn.innerHTML = `<i data-lucide="${res.icon}" class="w-4 h-4"></i> ${res.label}`;
-            resContainer.appendChild(btn);
-        });
+            // 6. Resources
+            const resContainer = document.getElementById('resource-buttons');
+            if(resContainer) {
+                labData.resources.forEach(res => {
+                    const btn = document.createElement('a');
+                    btn.href = res.active ? res.link : "javascript:void(0)";
+                    const activeClasses = "bg-white text-slate-900 hover:bg-blue-50 hover:scale-105";
+                    const inactiveClasses = "bg-slate-800 text-slate-500 cursor-not-allowed opacity-60";
+                    btn.className = `flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition transform shadow-sm ${res.active ? activeClasses : inactiveClasses}`;
+                    btn.innerHTML = `<i data-lucide="${res.icon}" class="w-4 h-4"></i> ${res.label}`;
+                    resContainer.appendChild(btn);
+                });
+            }
 
-        // Re-run icons
-        lucide.createIcons();
+            // 7. Initialize Icons (AFTER content is generated)
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            } else {
+                console.warn("Lucide library not found. Icons will not render.");
+            }
 
-        // Mobile menu toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
+            // 8. Mobile Menu
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if(btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
         });
     </script>
 </body>
