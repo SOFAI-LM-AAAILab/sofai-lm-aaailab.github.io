@@ -134,7 +134,21 @@
                             <i data-lucide="clock" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
                             <div>
                                 <strong class="block text-slate-900">Format</strong>
-                                Quarter Day Lab (1h 45m)
+                                Quarter Day Lab
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="calendar" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="block text-slate-900">Date</strong>
+                                Tuesday, January 20th 2026
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="clock-3" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+                            <div>
+                                <strong class="block text-slate-900">Time</strong>
+                                10:45 am - 12:30 pm
                             </div>
                         </li>
                         <li class="flex items-start gap-3">
@@ -148,7 +162,7 @@
                             <i data-lucide="map-pin" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
                             <div>
                                 <strong class="block text-slate-900">Location</strong>
-                                AAAI Conference (Room TBA)
+                                Opal 105-106
                             </div>
                         </li>
                     </ul>
@@ -181,6 +195,7 @@
 
         <section id="organizers" class="scroll-mt-24">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Organizers & Presenters</h2>
+            <p class="text-center text-sm text-slate-500 mb-10">Presenters: Francesca Rossi and Keerthiram Murugesan.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="organizers-grid">
                 </div>
         </section>
@@ -200,7 +215,7 @@
             <div class="bg-slate-900 rounded-3xl p-8 md:p-16 text-center">
                 <h2 class="text-3xl font-bold text-white mb-6">Lab Materials</h2>
                 <p class="text-slate-300 mb-8 max-w-2xl mx-auto">
-                    Access the GitHub repository, slides, and Colab notebooks. (Available soon)
+                    Access the GitHub repository and related materials.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4" id="resource-buttons">
                     </div>
@@ -243,48 +258,55 @@
                 }
             ],
             schedule: [
-                { time: "0-20 min", topic: "Welcome, objectives, and success criteria (accuracy-time trade-off)", lead: "Francesca Rossi" },
-                { time: "20-40 min", topic: "Environment Setup: Ollama (local or Colab), model pulls, sanity checks", lead: "Vishal Pallagani" },
-                { time: "40-50 min", topic: "Hands-on A: Graph Coloring evaluator C(y), targeted feedback, memory", lead: "Vedant Khandelwal" },
-                { time: "50-75 min", topic: "Hands-on B: DebugBench test harness, failure-focused feedback", lead: "Keerthiram Murugesan" },
-                { time: "75-85 min", topic: "LRM Fallback Demo & Model Swapping (PO/BA/FH strategies)", lead: "Vedant Khandelwal" },
-                { time: "85-105 min", topic: "Wrap-up, checklists, common failure modes, and Q&A", lead: "Lior Horesh" }
+                { time: "30 mins", topic: "Introduction", lead: "Francesca Rossi" },
+                { time: "15 mins", topic: "Deep Dive into SOFAI-LM", lead: "Keerthiram Murugesan" },
+                { time: "10 mins", topic: "Hands-on Session: Graph Coloring", lead: "Keerthiram Murugesan" },
+                { time: "10 mins", topic: "Hands-on Session: Code Debugging", lead: "Keerthiram Murugesan" },
+                { time: "10 mins", topic: "Hands-on Session: Mellea SOFAI-LM", lead: "Keerthiram Murugesan" },
+                { time: "15 mins", topic: "Experiment Results at Scale", lead: "Francesca Rossi" },
+                { time: "5 mins", topic: "Conclusion", lead: "Francesca Rossi" },
+                { time: "10 mins", topic: "Q/A", lead: "All" }
             ],
             organizers: [
                 { 
                     name: "Vedant Khandelwal", 
                     affil: "University of South Carolina",
-                    role: "Doctoral Student",
-                    desc: "PhD researcher at the University of South Carolina and former IBM Research intern, specializing in neurosymbolic architectures, LLM reasoning, and foundation models for pathfinding problems.",
-                    link: "https://www.linkedin.com/in/khvedant/"
+                    role: "PhD Candidate",
+                    desc: "PhD candidate at the University of South Carolina and former IBM Research intern, specializing in neurosymbolic architectures, LLM reasoning, and foundation models for pathfinding problems.",
+                    link: "https://www.linkedin.com/in/khvedant/",
+                    photo: "images/vedant.jpeg"
                 },
                 { 
                     name: "Francesca Rossi", 
                     affil: "IBM Research",
                     role: "IBM Fellow & AI Ethics Leader",
                     desc: "IBM Fellow and Global Lead for AI Ethics, renowned for her work in constraint reasoning, multi-agent systems, and international AI governance, with over 220 publications and leadership roles in AAAI and IJCAI.",
-                    link: "https://research.ibm.com/people/francesca-rossi"
+                    link: "https://research.ibm.com/people/francesca-rossi",
+                    photo: "images/francesca.jpeg"
                 },
                 { 
                     name: "Vishal Pallagani", 
                     affil: "University of South Carolina",
                     role: "PhD Candidate",
                     desc: "PhD candidate at the University of South Carolina and recurring IBM Research intern, known for developing neurosymbolic planning systems such as Plansformer, Plan-SOFAI, and fast/slow AI architectures.",
-                    link: "https://vishalpallagani.github.io/"
+                    link: "https://vishalpallagani.github.io/",
+                    photo: "images/vishal.jpeg"
                 },
                 { 
                     name: "Keerthiram Murugesan", 
                     affil: "IBM Research",
                     role: "Staff Research Scientist",
                     desc: "Staff Research Scientist at IBM Research with expertise in multi-task learning, transfer learning, reinforcement learning, and NLP, recognized by awards including the CMU Presidential Fellowship and HLF selection.",
-                    link: "https://research.ibm.com/people/keerthiram-murugesan"
+                    link: "https://research.ibm.com/people/keerthiram-murugesan",
+                    photo: "images/keerthiram.jpeg"
                 },
                 { 
                     name: "Lior Horesh", 
                     affil: "IBM Research",
                     role: "Senior Manager",
                     desc: "Senior Manager of Mathematics & Theoretical Computer Science at IBM Research and former Columbia University adjunct professor, known for award-winning work in tensor algebra, AI-assisted scientific discovery, and quantum simulation.",
-                    link: "https://research.ibm.com/people/lior-horesh"
+                    link: "https://research.ibm.com/people/lior-horesh",
+                    photo: "images/lior.jpg"
                 }
             ],
             references: [
@@ -295,9 +317,9 @@
                 "<strong>DeepSeek-R1:</strong> Guo et al. (2025). <em>Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning.</em>"
             ],
             resources: [
-                { label: "Paper (Preprint)", link: "#", icon: "file-text", active: false }, 
-                { label: "GitHub Repo", link: "https://github.com/khvedant/sofailm-lab", icon: "github", active: false },
-                { label: "Colab Notebook", link: "#", icon: "code", active: false }
+                { label: "AAAI Lab Listing", link: "https://aaai.org/conference/aaai/aaai-26/tutorial-and-lab-list/#lq01", icon: "external-link", active: true },
+                { label: "Tutorial", link: "https://research.ibm.com/publications/sofai-lm-a-cognitive-architecture-for-building-efficient-and-reliable-reasoning-systems-with-llms", icon: "file-text", active: true },
+                { label: "GitHub Repo", link: "https://github.com/SOFAI-LM-AAAILab/SOFAI-LM", icon: "github", active: true }
             ]
         };
 
@@ -351,9 +373,7 @@
                     div.innerHTML = `
                         <div class="p-6 flex-1 flex flex-col">
                             <div class="flex items-center gap-4 mb-4">
-                                <div class="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg shrink-0">
-                                    ${person.name.charAt(0)}
-                                </div>
+                                <img src="${person.photo}" alt="${person.name}" class="h-16 w-16 sm:h-20 sm:w-20 rounded-full object-cover object-top shrink-0">
                                 <div>
                                     <h3 class="text-lg font-bold text-slate-900 leading-tight">${person.name}</h3>
                                     <p class="text-sm text-blue-600 font-medium">${person.role}</p>
