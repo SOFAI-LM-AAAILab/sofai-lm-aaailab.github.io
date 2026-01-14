@@ -44,16 +44,10 @@ Presenters: Francesca Rossi and Keerthiram Murugesan.
 |---------|-----------|
 | Introduction | Francesca Rossi |
 | Deep Dive into SOFAI-LM | Keerthiram Murugesan |
-| Setting up a new Domain | Francesca Rossi, Keerthiram Murugesan |
-| Hands-on Session | Keerthiram Murugesan |
-| Graph Coloring Decision Problem | Francesca Rossi, Keerthiram Murugesan |
-| Hands-on Session | Keerthiram Murugesan |
-| Code Debugging | Francesca Rossi, Keerthiram Murugesan |
-| Hands-on Session | Keerthiram Murugesan |
-| Mellea - SOFAI-LM Sampling Strategy | Francesca Rossi, Keerthiram Murugesan |
-| Experiment Results | Francesca Rossi |
-| SOFAI-LM Results for Code Debugging | Francesca Rossi, Keerthiram Murugesan |
-| SOFAI-LM Results for Graph Coloring Decision Problem | Francesca Rossi, Keerthiram Murugesan |
+| Hands-on Session: Graph Coloring | Keerthiram Murugesan |
+| Hands-on Session: Code Debugging | Keerthiram Murugesan |
+| Hands-on Session: Mellea - SOFAI-LM | Keerthiram Murugesan |
+| Experiment Results at Scale | Francesca Rossi |
 | Conclusion | Francesca Rossi |
 | Q/A | All |
 
