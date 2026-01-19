@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
-        
-        body { font-family: 'Inter', sans-serif; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
-        
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
         .gradient-text {
             background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
+
         .nav-link {
             position: relative;
         }
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -32,13 +39,17 @@
             background-color: #2563eb;
             transition: width 0.3s ease;
         }
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
-        html { scroll-behavior: smooth; }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-800 antialiased">
 
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm border-b border-slate-200 z-50">
@@ -49,10 +60,14 @@
                     <span class="font-bold text-xl tracking-tight text-slate-900">SOFAI-LM</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#about" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">About</a>
-                    <a href="#schedule" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Schedule</a>
-                    <a href="#organizers" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Organizers</a>
-                    <a href="#references" class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">References</a>
+                    <a href="#about"
+                        class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#schedule"
+                        class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Schedule</a>
+                    <a href="#organizers"
+                        class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">Organizers</a>
+                    <a href="#references"
+                        class="nav-link text-slate-600 hover:text-blue-600 transition px-3 py-2 text-sm font-medium">References</a>
                 </div>
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900">
@@ -63,38 +78,46 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">About</a>
-                <a href="#schedule" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Schedule</a>
-                <a href="#organizers" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Organizers</a>
-                <a href="#references" class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">References</a>
+                <a href="#about"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">About</a>
+                <a href="#schedule"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Schedule</a>
+                <a href="#organizers"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">Organizers</a>
+                <a href="#references"
+                    class="block px-3 py-2 text-base font-medium text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-md">References</a>
             </div>
         </div>
     </nav>
 
     <header class="pt-32 pb-20 lg:pt-48 lg:pb-32 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
+            <div
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-8">
                 <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                 </span>
                 Accepted at AAAI Lab Forum
             </div>
             <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 mb-6 max-w-5xl mx-auto">
-                SOFAI-LM: <br class="hidden md:block"/>
-                <span class="gradient-text">A Cognitive Architecture</span> <br/>
+                SOFAI-LM: <br class="hidden md:block" />
+                <span class="gradient-text">A Cognitive Architecture</span> <br />
                 for Efficient Reasoning
             </h1>
             <p class="mt-6 text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                Building reliable, compute-efficient reasoning systems by instantiating SOFAI-LM: 
+                Building reliable, compute-efficient reasoning systems by instantiating SOFAI-LM:
                 a cognitive architecture guiding fast LLMs with metacognitive feedback.
             </p>
-            
+
             <div class="mt-10 flex justify-center gap-4">
-                <a href="#resources" class="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition flex items-center gap-2">
+                <a href="#resources"
+                    class="rounded-lg bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition flex items-center gap-2">
                     <i data-lucide="download"></i> Get Materials
                 </a>
-                <a href="#about" class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition">
+                <a href="#about"
+                    class="rounded-lg bg-white px-6 py-3 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 transition">
                     Learn More
                 </a>
             </div>
@@ -102,16 +125,21 @@
             <!-- Logos -->
             <div class="mt-16 border-t border-slate-100 pt-10">
                 <p class="text-sm font-semibold text-slate-500 tracking-wider uppercase mb-8">Organizations</p>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:grayscale-0 transition duration-500">
+                <div
+                    class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-80 hover:grayscale-0 transition duration-500">
                     <!-- IBM Research -->
-                    <img src="https://imageio.forbes.com/specials-images/imageserve/62f12d261c21e21259d408c4/IBM/0x0.jpg" alt="IBM Research" class="h-12 md:h-16 w-auto">
+                    <img src="https://imageio.forbes.com/specials-images/imageserve/62f12d261c21e21259d408c4/IBM/0x0.jpg"
+                        alt="IBM Research" class="h-12 md:h-16 w-auto">
                     <!-- University of South Carolina -->
                     <div class="flex items-center gap-4">
-                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y_mum9OJle86GizlgvtUmCSXwNg_xLdOWQ&s" alt="University of South Carolina" class="h-14 md:h-20 w-auto">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1y_mum9OJle86GizlgvtUmCSXwNg_xLdOWQ&s"
+                            alt="University of South Carolina" class="h-14 md:h-20 w-auto">
                     </div>
                     <!-- AIISC Text Badge (Since specific logo URL is unstable, we use a badge style) -->
                     <div class="flex items-center gap-4">
-                         <img src="https://aiisc.cse.sc.edu/smbd24/images/ai_institute_logo.png" alt="Artificial Intelligence Institute, University of South Carolina" class="h-14 md:h-20 w-auto">
+                        <img src="https://aiisc.cse.sc.edu/smbd24/images/ai_institute_logo.png"
+                            alt="Artificial Intelligence Institute, University of South Carolina"
+                            class="h-14 md:h-20 w-auto">
                     </div>
                 </div>
             </div>
@@ -125,7 +153,7 @@
                 <div class="md:col-span-2">
                     <h2 class="text-3xl font-bold text-slate-900 mb-6">About the Lab</h2>
                     <div class="prose prose-lg text-slate-600" id="abstract-content">
-                        </div>
+                    </div>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 h-fit">
                     <h3 class="text-lg font-semibold text-slate-900 mb-4">Quick Facts</h3>
@@ -158,7 +186,7 @@
                                 Graduate students, researchers, and practitioners.
                             </div>
                         </li>
-                         <li class="flex items-start gap-3">
+                        <li class="flex items-start gap-3">
                             <i data-lucide="map-pin" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
                             <div>
                                 <strong class="block text-slate-900">Location</strong>
@@ -173,7 +201,7 @@
         <section class="bg-slate-50 rounded-3xl p-8 md:p-12 border border-slate-200">
             <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">What You Will Learn</h2>
             <div class="grid md:grid-cols-3 gap-8" id="takeaways-grid">
-                </div>
+            </div>
         </section>
 
         <section id="schedule" class="scroll-mt-24">
@@ -182,22 +210,27 @@
                 <table class="min-w-full divide-y divide-slate-300">
                     <thead class="bg-slate-50">
                         <tr>
-                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6 w-32">Time</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Segment</th>
-                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Presenter</th>
+                            <th scope="col"
+                                class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6 w-32">
+                                Time</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Segment
+                            </th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">Presenter
+                            </th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-200 bg-white" id="schedule-body">
-                        </tbody>
+                    </tbody>
                 </table>
             </div>
         </section>
 
         <section id="organizers" class="scroll-mt-24">
             <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">Organizers & Presenters</h2>
-            <p class="text-center text-sm text-slate-500 mb-10">Presenters: Francesca Rossi and Keerthiram Murugesan.</p>
+            <p class="text-center text-sm text-slate-500 mb-10">Presenters: Francesca Rossi, Keerthiram Murugesan, and
+                Erik Miehling.</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="organizers-grid">
-                </div>
+            </div>
         </section>
 
         <section id="references" class="scroll-mt-24">
@@ -206,7 +239,7 @@
                 <div class="p-6 sm:p-8">
                     <p class="text-slate-500 mb-6 italic">The lab builds upon the following foundational research:</p>
                     <ul class="space-y-4" id="references-list">
-                        </ul>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -218,7 +251,7 @@
                     Access the GitHub repository and related materials.
                 </p>
                 <div class="flex flex-wrap justify-center gap-4" id="resource-buttons">
-                    </div>
+                </div>
             </div>
         </section>
 
@@ -268,45 +301,53 @@
                 { time: "10 mins", topic: "Q/A", lead: "All" }
             ],
             organizers: [
-                { 
-                    name: "Vedant Khandelwal", 
+                {
+                    name: "Vedant Khandelwal",
                     affil: "University of South Carolina",
                     role: "PhD Candidate",
                     desc: "PhD candidate at the University of South Carolina and former IBM Research intern, specializing in neurosymbolic architectures, LLM reasoning, and foundation models for pathfinding problems.",
-                    link: "https://www.linkedin.com/in/khvedant/",
+                    link: "https://khvedant02.github.io/",
                     photo: "images/vedant.jpeg"
                 },
-                { 
-                    name: "Francesca Rossi", 
+                {
+                    name: "Francesca Rossi",
                     affil: "IBM Research",
                     role: "IBM Fellow & AI Ethics Leader",
                     desc: "IBM Fellow and Global Lead for AI Ethics, renowned for her work in constraint reasoning, multi-agent systems, and international AI governance, with over 220 publications and leadership roles in AAAI and IJCAI.",
                     link: "https://research.ibm.com/people/francesca-rossi",
                     photo: "images/francesca.jpeg"
                 },
-                { 
-                    name: "Vishal Pallagani", 
+                {
+                    name: "Vishal Pallagani",
                     affil: "University of South Carolina",
                     role: "PhD Candidate",
                     desc: "PhD candidate at the University of South Carolina and recurring IBM Research intern, known for developing neurosymbolic planning systems such as Plansformer, Plan-SOFAI, and fast/slow AI architectures.",
                     link: "https://vishalpallagani.github.io/",
                     photo: "images/vishal.jpeg"
                 },
-                { 
-                    name: "Keerthiram Murugesan", 
+                {
+                    name: "Keerthiram Murugesan",
                     affil: "IBM Research",
                     role: "Staff Research Scientist",
                     desc: "Staff Research Scientist at IBM Research with expertise in multi-task learning, transfer learning, reinforcement learning, and NLP, recognized by awards including the CMU Presidential Fellowship and HLF selection.",
                     link: "https://research.ibm.com/people/keerthiram-murugesan",
                     photo: "images/keerthiram.jpeg"
                 },
-                { 
-                    name: "Lior Horesh", 
+                {
+                    name: "Lior Horesh",
                     affil: "IBM Research",
                     role: "Senior Manager",
                     desc: "Senior Manager of Mathematics & Theoretical Computer Science at IBM Research and former Columbia University adjunct professor, known for award-winning work in tensor algebra, AI-assisted scientific discovery, and quantum simulation.",
                     link: "https://research.ibm.com/people/lior-horesh",
                     photo: "images/lior.jpg"
+                },
+                {
+                    name: "Erik Miehling",
+                    affil: "IBM Research",
+                    role: "Staff Research Scientist",
+                    desc: "Staff Research Scientist at IBM Research (Dublin), leading safety research on multi-agent governance and scalable oversight of generative models. Project lead for AI Steerability 360; his work on conversational risk dimensions is deployed in Granite Guardian.",
+                    link: "http://emiehling.github.io/",
+                    photo: "images/erik.jpeg"
                 }
             ],
             references: [
@@ -314,7 +355,8 @@
                 "<strong>Metacognition:</strong> Ganapini et al. (2022). <em>Thinking Fast and Slow in AI: The Role of Metacognition.</em>",
                 "<strong>Plan-SOFAI:</strong> Fabiano et al. (2023). <em>Plan-SOFAI: A Neuro-Symbolic Planning Architecture.</em>",
                 "<strong>DebugBench:</strong> Tian et al. (2024). <em>Evaluating Debugging Capability of Large Language Models.</em> ACL 2024.",
-                "<strong>DeepSeek-R1:</strong> Guo et al. (2025). <em>Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning.</em>"
+                "<strong>DeepSeek-R1:</strong> Guo et al. (2025). <em>Deepseek-r1: Incentivizing reasoning capability in llms via reinforcement learning.</em>",
+                "<strong>Mellea:</strong> <a href='https://mellea.ai/' class='text-blue-600 hover:underline'>mellea.ai</a> — A library for generative programming with structured, robust AI workflows."
             ],
             resources: [
                 { label: "AAAI Lab Listing", link: "https://aaai.org/conference/aaai/aaai-26/tutorial-and-lab-list/#lq01", icon: "external-link", active: true },
@@ -326,16 +368,16 @@
         // ==========================================
         // RENDER LOGIC
         // ==========================================
-        
+
         document.addEventListener('DOMContentLoaded', () => {
-            
+
             // 1. Abstract
             const abstractEl = document.getElementById('abstract-content');
-            if(abstractEl) abstractEl.innerHTML = labData.abstract;
+            if (abstractEl) abstractEl.innerHTML = labData.abstract;
 
             // 2. Takeaways
             const takeawaysContainer = document.getElementById('takeaways-grid');
-            if(takeawaysContainer) {
+            if (takeawaysContainer) {
                 labData.takeaways.forEach(item => {
                     const div = document.createElement('div');
                     div.className = "bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition";
@@ -352,7 +394,7 @@
 
             // 3. Schedule
             const scheduleBody = document.getElementById('schedule-body');
-            if(scheduleBody) {
+            if (scheduleBody) {
                 labData.schedule.forEach(item => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
@@ -366,7 +408,7 @@
 
             // 4. Organizers
             const orgContainer = document.getElementById('organizers-grid');
-            if(orgContainer) {
+            if (orgContainer) {
                 labData.organizers.forEach(person => {
                     const div = document.createElement('div');
                     div.className = "flex flex-col bg-white border border-slate-200 rounded-xl overflow-hidden hover:shadow-lg transition duration-300 group";
@@ -392,7 +434,7 @@
 
             // 5. References
             const refList = document.getElementById('references-list');
-            if(refList) {
+            if (refList) {
                 labData.references.forEach(ref => {
                     const li = document.createElement('li');
                     li.className = "flex gap-3 text-slate-700 text-sm leading-relaxed";
@@ -406,7 +448,7 @@
 
             // 6. Resources
             const resContainer = document.getElementById('resource-buttons');
-            if(resContainer) {
+            if (resContainer) {
                 labData.resources.forEach(res => {
                     const btn = document.createElement('a');
                     btn.href = res.active ? res.link : "javascript:void(0)";
@@ -428,7 +470,7 @@
             // 8. Mobile Menu
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
-            if(btn && menu) {
+            if (btn && menu) {
                 btn.addEventListener('click', () => {
                     menu.classList.toggle('hidden');
                 });
@@ -436,4 +478,5 @@
         });
     </script>
 </body>
+
 </html>
